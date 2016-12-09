@@ -1,0 +1,565 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5F9C84F1DF8FE1C001EFE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C84E1DF8FE1C001EFE59 /* main.m */; };
+		F5F9C8521DF8FE1C001EFE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8511DF8FE1C001EFE59 /* AppDelegate.m */; };
+		F5F9C8551DF8FE1C001EFE59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8541DF8FE1C001EFE59 /* ViewController.m */; };
+		F5F9C8581DF8FE1C001EFE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F9C8561DF8FE1C001EFE59 /* Main.storyboard */; };
+		F5F9C85A1DF8FE1C001EFE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F9C8591DF8FE1C001EFE59 /* Assets.xcassets */; };
+		F5F9C85D1DF8FE1C001EFE59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F9C85B1DF8FE1C001EFE59 /* LaunchScreen.storyboard */; };
+		F5F9C8681DF8FE1C001EFE59 /* OWMeterViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8671DF8FE1C001EFE59 /* OWMeterViewTests.m */; };
+		F5F9C8731DF8FE1C001EFE59 /* OWMeterViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8721DF8FE1C001EFE59 /* OWMeterViewUITests.m */; };
+		F5F9C8861DF90952001EFE59 /* OWMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8851DF90952001EFE59 /* OWMeterView.m */; };
+		F5F9C8891DF934DC001EFE59 /* OWPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8881DF934DC001EFE59 /* OWPointer.m */; };
+		F5F9C88C1DF9358B001EFE59 /* OWMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C88B1DF9358B001EFE59 /* OWMeter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5F9C8641DF8FE1C001EFE59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5F9C8421DF8FE1C001EFE59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5F9C8491DF8FE1C001EFE59;
+			remoteInfo = OWMeterView;
+		};
+		F5F9C86F1DF8FE1C001EFE59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5F9C8421DF8FE1C001EFE59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5F9C8491DF8FE1C001EFE59;
+			remoteInfo = OWMeterView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5F9C84A1DF8FE1C001EFE59 /* OWMeterView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OWMeterView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F9C84E1DF8FE1C001EFE59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5F9C8501DF8FE1C001EFE59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5F9C8511DF8FE1C001EFE59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5F9C8531DF8FE1C001EFE59 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F5F9C8541DF8FE1C001EFE59 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5F9C8571DF8FE1C001EFE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5F9C8591DF8FE1C001EFE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5F9C85C1DF8FE1C001EFE59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5F9C85E1DF8FE1C001EFE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5F9C8631DF8FE1C001EFE59 /* OWMeterViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OWMeterViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F9C8671DF8FE1C001EFE59 /* OWMeterViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMeterViewTests.m; sourceTree = "<group>"; };
+		F5F9C8691DF8FE1C001EFE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5F9C86E1DF8FE1C001EFE59 /* OWMeterViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OWMeterViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F9C8721DF8FE1C001EFE59 /* OWMeterViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWMeterViewUITests.m; sourceTree = "<group>"; };
+		F5F9C8741DF8FE1C001EFE59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5F9C8841DF90952001EFE59 /* OWMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWMeterView.h; sourceTree = "<group>"; };
+		F5F9C8851DF90952001EFE59 /* OWMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWMeterView.m; sourceTree = "<group>"; };
+		F5F9C8871DF934DC001EFE59 /* OWPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWPointer.h; sourceTree = "<group>"; };
+		F5F9C8881DF934DC001EFE59 /* OWPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWPointer.m; sourceTree = "<group>"; };
+		F5F9C88A1DF9358B001EFE59 /* OWMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWMeter.h; sourceTree = "<group>"; };
+		F5F9C88B1DF9358B001EFE59 /* OWMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWMeter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5F9C8471DF8FE1C001EFE59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F9C8601DF8FE1C001EFE59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F9C86B1DF8FE1C001EFE59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5F9C8411DF8FE1C001EFE59 = {
+			isa = PBXGroup;
+			children = (
+				F5F9C8801DF9019A001EFE59 /* MeterView */,
+				F5F9C84C1DF8FE1C001EFE59 /* OWMeterView */,
+				F5F9C8661DF8FE1C001EFE59 /* OWMeterViewTests */,
+				F5F9C8711DF8FE1C001EFE59 /* OWMeterViewUITests */,
+				F5F9C84B1DF8FE1C001EFE59 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5F9C84B1DF8FE1C001EFE59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5F9C84A1DF8FE1C001EFE59 /* OWMeterView.app */,
+				F5F9C8631DF8FE1C001EFE59 /* OWMeterViewTests.xctest */,
+				F5F9C86E1DF8FE1C001EFE59 /* OWMeterViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5F9C84C1DF8FE1C001EFE59 /* OWMeterView */ = {
+			isa = PBXGroup;
+			children = (
+				F5F9C8501DF8FE1C001EFE59 /* AppDelegate.h */,
+				F5F9C8511DF8FE1C001EFE59 /* AppDelegate.m */,
+				F5F9C8531DF8FE1C001EFE59 /* ViewController.h */,
+				F5F9C8541DF8FE1C001EFE59 /* ViewController.m */,
+				F5F9C8561DF8FE1C001EFE59 /* Main.storyboard */,
+				F5F9C8591DF8FE1C001EFE59 /* Assets.xcassets */,
+				F5F9C85B1DF8FE1C001EFE59 /* LaunchScreen.storyboard */,
+				F5F9C85E1DF8FE1C001EFE59 /* Info.plist */,
+				F5F9C84D1DF8FE1C001EFE59 /* Supporting Files */,
+			);
+			path = OWMeterView;
+			sourceTree = "<group>";
+		};
+		F5F9C84D1DF8FE1C001EFE59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5F9C84E1DF8FE1C001EFE59 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5F9C8661DF8FE1C001EFE59 /* OWMeterViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5F9C8671DF8FE1C001EFE59 /* OWMeterViewTests.m */,
+				F5F9C8691DF8FE1C001EFE59 /* Info.plist */,
+			);
+			path = OWMeterViewTests;
+			sourceTree = "<group>";
+		};
+		F5F9C8711DF8FE1C001EFE59 /* OWMeterViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F5F9C8721DF8FE1C001EFE59 /* OWMeterViewUITests.m */,
+				F5F9C8741DF8FE1C001EFE59 /* Info.plist */,
+			);
+			path = OWMeterViewUITests;
+			sourceTree = "<group>";
+		};
+		F5F9C8801DF9019A001EFE59 /* MeterView */ = {
+			isa = PBXGroup;
+			children = (
+				F5F9C8841DF90952001EFE59 /* OWMeterView.h */,
+				F5F9C8851DF90952001EFE59 /* OWMeterView.m */,
+				F5F9C8871DF934DC001EFE59 /* OWPointer.h */,
+				F5F9C8881DF934DC001EFE59 /* OWPointer.m */,
+				F5F9C88A1DF9358B001EFE59 /* OWMeter.h */,
+				F5F9C88B1DF9358B001EFE59 /* OWMeter.m */,
+			);
+			path = MeterView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5F9C8491DF8FE1C001EFE59 /* OWMeterView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F9C8771DF8FE1C001EFE59 /* Build configuration list for PBXNativeTarget "OWMeterView" */;
+			buildPhases = (
+				F5F9C8461DF8FE1C001EFE59 /* Sources */,
+				F5F9C8471DF8FE1C001EFE59 /* Frameworks */,
+				F5F9C8481DF8FE1C001EFE59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OWMeterView;
+			productName = OWMeterView;
+			productReference = F5F9C84A1DF8FE1C001EFE59 /* OWMeterView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5F9C8621DF8FE1C001EFE59 /* OWMeterViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F9C87A1DF8FE1C001EFE59 /* Build configuration list for PBXNativeTarget "OWMeterViewTests" */;
+			buildPhases = (
+				F5F9C85F1DF8FE1C001EFE59 /* Sources */,
+				F5F9C8601DF8FE1C001EFE59 /* Frameworks */,
+				F5F9C8611DF8FE1C001EFE59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5F9C8651DF8FE1C001EFE59 /* PBXTargetDependency */,
+			);
+			name = OWMeterViewTests;
+			productName = OWMeterViewTests;
+			productReference = F5F9C8631DF8FE1C001EFE59 /* OWMeterViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F5F9C86D1DF8FE1C001EFE59 /* OWMeterViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F9C87D1DF8FE1C001EFE59 /* Build configuration list for PBXNativeTarget "OWMeterViewUITests" */;
+			buildPhases = (
+				F5F9C86A1DF8FE1C001EFE59 /* Sources */,
+				F5F9C86B1DF8FE1C001EFE59 /* Frameworks */,
+				F5F9C86C1DF8FE1C001EFE59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5F9C8701DF8FE1C001EFE59 /* PBXTargetDependency */,
+			);
+			name = OWMeterViewUITests;
+			productName = OWMeterViewUITests;
+			productReference = F5F9C86E1DF8FE1C001EFE59 /* OWMeterViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5F9C8421DF8FE1C001EFE59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = conpak;
+				TargetAttributes = {
+					F5F9C8491DF8FE1C001EFE59 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5997FHFDCF;
+						ProvisioningStyle = Automatic;
+					};
+					F5F9C8621DF8FE1C001EFE59 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5997FHFDCF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F5F9C8491DF8FE1C001EFE59;
+					};
+					F5F9C86D1DF8FE1C001EFE59 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5997FHFDCF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F5F9C8491DF8FE1C001EFE59;
+					};
+				};
+			};
+			buildConfigurationList = F5F9C8451DF8FE1C001EFE59 /* Build configuration list for PBXProject "OWMeterView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5F9C8411DF8FE1C001EFE59;
+			productRefGroup = F5F9C84B1DF8FE1C001EFE59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5F9C8491DF8FE1C001EFE59 /* OWMeterView */,
+				F5F9C8621DF8FE1C001EFE59 /* OWMeterViewTests */,
+				F5F9C86D1DF8FE1C001EFE59 /* OWMeterViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5F9C8481DF8FE1C001EFE59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F9C85D1DF8FE1C001EFE59 /* LaunchScreen.storyboard in Resources */,
+				F5F9C85A1DF8FE1C001EFE59 /* Assets.xcassets in Resources */,
+				F5F9C8581DF8FE1C001EFE59 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F9C8611DF8FE1C001EFE59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F9C86C1DF8FE1C001EFE59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5F9C8461DF8FE1C001EFE59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F9C8551DF8FE1C001EFE59 /* ViewController.m in Sources */,
+				F5F9C8521DF8FE1C001EFE59 /* AppDelegate.m in Sources */,
+				F5F9C8861DF90952001EFE59 /* OWMeterView.m in Sources */,
+				F5F9C88C1DF9358B001EFE59 /* OWMeter.m in Sources */,
+				F5F9C84F1DF8FE1C001EFE59 /* main.m in Sources */,
+				F5F9C8891DF934DC001EFE59 /* OWPointer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F9C85F1DF8FE1C001EFE59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F9C8681DF8FE1C001EFE59 /* OWMeterViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5F9C86A1DF8FE1C001EFE59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F9C8731DF8FE1C001EFE59 /* OWMeterViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5F9C8651DF8FE1C001EFE59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5F9C8491DF8FE1C001EFE59 /* OWMeterView */;
+			targetProxy = F5F9C8641DF8FE1C001EFE59 /* PBXContainerItemProxy */;
+		};
+		F5F9C8701DF8FE1C001EFE59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5F9C8491DF8FE1C001EFE59 /* OWMeterView */;
+			targetProxy = F5F9C86F1DF8FE1C001EFE59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5F9C8561DF8FE1C001EFE59 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5F9C8571DF8FE1C001EFE59 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5F9C85B1DF8FE1C001EFE59 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5F9C85C1DF8FE1C001EFE59 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5F9C8751DF8FE1C001EFE59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5F9C8761DF8FE1C001EFE59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5F9C8781DF8FE1C001EFE59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWMeterView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWMeterView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5F9C8791DF8FE1C001EFE59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWMeterView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWMeterView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F5F9C87B1DF8FE1C001EFE59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWMeterViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWMeterViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OWMeterView.app/OWMeterView";
+			};
+			name = Debug;
+		};
+		F5F9C87C1DF8FE1C001EFE59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWMeterViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWMeterViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OWMeterView.app/OWMeterView";
+			};
+			name = Release;
+		};
+		F5F9C87E1DF8FE1C001EFE59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWMeterViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWMeterViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OWMeterView;
+			};
+			name = Debug;
+		};
+		F5F9C87F1DF8FE1C001EFE59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 5997FHFDCF;
+				INFOPLIST_FILE = OWMeterViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Owen.OWMeterViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OWMeterView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5F9C8451DF8FE1C001EFE59 /* Build configuration list for PBXProject "OWMeterView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F9C8751DF8FE1C001EFE59 /* Debug */,
+				F5F9C8761DF8FE1C001EFE59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5F9C8771DF8FE1C001EFE59 /* Build configuration list for PBXNativeTarget "OWMeterView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F9C8781DF8FE1C001EFE59 /* Debug */,
+				F5F9C8791DF8FE1C001EFE59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F5F9C87A1DF8FE1C001EFE59 /* Build configuration list for PBXNativeTarget "OWMeterViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F9C87B1DF8FE1C001EFE59 /* Debug */,
+				F5F9C87C1DF8FE1C001EFE59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F5F9C87D1DF8FE1C001EFE59 /* Build configuration list for PBXNativeTarget "OWMeterViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F9C87E1DF8FE1C001EFE59 /* Debug */,
+				F5F9C87F1DF8FE1C001EFE59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5F9C8421DF8FE1C001EFE59 /* Project object */;
+}
