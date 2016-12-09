@@ -11,5 +11,6 @@
 @interface OWMeter : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame color:(UIColor *)color;
+- (void)animationStartsWithDecimalValue:(CGFloat)decimalValue;
 
 @end

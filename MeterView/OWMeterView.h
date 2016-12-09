@@ -15,8 +15,12 @@
 @optional
 
 - (NSString *)titleOnMeter:(OWMeterView *)meterView;
-- (UIColor *)colorOneMeter:(OWMeterView *)meterView;
-- (UIView *)backGroudViewOneMeter:(OWMeterView *)meterView;
+- (UIColor *)frontColorOnMeter:(OWMeterView *)meterView;
+- (UIView *)backGroudViewOnMeter:(OWMeterView *)meterView;
+- (UIColor *)titleColorOnMeter:(OWMeterView *)meterView;
+- (UIColor *)valueColorOnMeter:(OWMeterView *)meterView;
+- (UIFont *)titleFontOnMeter:(OWMeterView *)meterView;
+- (UIFont *)valueFontOnMeter:(OWMeterView *)meterView;
 
 @end
 

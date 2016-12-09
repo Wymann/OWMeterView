@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4259A98C83F20068C7DA0930 /* libPods-OWMeterView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B74624A829A8961015A1A1 /* libPods-OWMeterView.a */; };
+		F5C2720D1DFA5968001597E3 /* OWSemicircle.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C2720C1DFA5968001597E3 /* OWSemicircle.m */; };
 		F5F9C84F1DF8FE1C001EFE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C84E1DF8FE1C001EFE59 /* main.m */; };
 		F5F9C8521DF8FE1C001EFE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8511DF8FE1C001EFE59 /* AppDelegate.m */; };
 		F5F9C8551DF8FE1C001EFE59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8541DF8FE1C001EFE59 /* ViewController.m */; };
@@ -38,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20B74624A829A8961015A1A1 /* libPods-OWMeterView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OWMeterView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3217E5C9F41F359FFCCC30 /* Pods-OWMeterView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWMeterView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OWMeterView/Pods-OWMeterView.debug.xcconfig"; sourceTree = "<group>"; };
+		E049BD1FA3F3C6CD4583AC79 /* Pods-OWMeterView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWMeterView.release.xcconfig"; path = "Pods/Target Support Files/Pods-OWMeterView/Pods-OWMeterView.release.xcconfig"; sourceTree = "<group>"; };
+		F5C2720B1DFA5968001597E3 /* OWSemicircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSemicircle.h; sourceTree = "<group>"; };
+		F5C2720C1DFA5968001597E3 /* OWSemicircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSemicircle.m; sourceTree = "<group>"; };
 		F5F9C84A1DF8FE1C001EFE59 /* OWMeterView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OWMeterView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F9C84E1DF8FE1C001EFE59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5F9C8501DF8FE1C001EFE59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4259A98C83F20068C7DA0930 /* libPods-OWMeterView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08F35CAD48E2AC7D6FD1F8A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C3217E5C9F41F359FFCCC30 /* Pods-OWMeterView.debug.xcconfig */,
+				E049BD1FA3F3C6CD4583AC79 /* Pods-OWMeterView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A63CD411D484DB6E27F8613C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20B74624A829A8961015A1A1 /* libPods-OWMeterView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F5F9C8411DF8FE1C001EFE59 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +120,8 @@
 				F5F9C8661DF8FE1C001EFE59 /* OWMeterViewTests */,
 				F5F9C8711DF8FE1C001EFE59 /* OWMeterViewUITests */,
 				F5F9C84B1DF8FE1C001EFE59 /* Products */,
+				08F35CAD48E2AC7D6FD1F8A3 /* Pods */,
+				A63CD411D484DB6E27F8613C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +186,8 @@
 				F5F9C8881DF934DC001EFE59 /* OWPointer.m */,
 				F5F9C88A1DF9358B001EFE59 /* OWMeter.h */,
 				F5F9C88B1DF9358B001EFE59 /* OWMeter.m */,
+				F5C2720B1DFA5968001597E3 /* OWSemicircle.h */,
+				F5C2720C1DFA5968001597E3 /* OWSemicircle.m */,
 			);
 			path = MeterView;
 			sourceTree = "<group>";
@@ -170,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5F9C8771DF8FE1C001EFE59 /* Build configuration list for PBXNativeTarget "OWMeterView" */;
 			buildPhases = (
+				13FDBCF54A2A4BE05A79A6CF /* [CP] Check Pods Manifest.lock */,
 				F5F9C8461DF8FE1C001EFE59 /* Sources */,
 				F5F9C8471DF8FE1C001EFE59 /* Frameworks */,
 				F5F9C8481DF8FE1C001EFE59 /* Resources */,
+				A502CCBBC9F4937BBD3304AF /* [CP] Embed Pods Frameworks */,
+				11EBD491770FB9801C21ED34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,11 +326,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		11EBD491770FB9801C21ED34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OWMeterView/Pods-OWMeterView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13FDBCF54A2A4BE05A79A6CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A502CCBBC9F4937BBD3304AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OWMeterView/Pods-OWMeterView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5F9C8461DF8FE1C001EFE59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C2720D1DFA5968001597E3 /* OWSemicircle.m in Sources */,
 				F5F9C8551DF8FE1C001EFE59 /* ViewController.m in Sources */,
 				F5F9C8521DF8FE1C001EFE59 /* AppDelegate.m in Sources */,
 				F5F9C8861DF90952001EFE59 /* OWMeterView.m in Sources */,
@@ -377,6 +458,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -425,6 +507,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -451,6 +534,7 @@
 		};
 		F5F9C8781DF8FE1C001EFE59 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C3217E5C9F41F359FFCCC30 /* Pods-OWMeterView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5997FHFDCF;
@@ -463,6 +547,7 @@
 		};
 		F5F9C8791DF8FE1C001EFE59 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E049BD1FA3F3C6CD4583AC79 /* Pods-OWMeterView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5997FHFDCF;
@@ -542,6 +627,7 @@
 				F5F9C8791DF8FE1C001EFE59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5F9C87A1DF8FE1C001EFE59 /* Build configuration list for PBXNativeTarget "OWMeterViewTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +636,7 @@
 				F5F9C87C1DF8FE1C001EFE59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5F9C87D1DF8FE1C001EFE59 /* Build configuration list for PBXNativeTarget "OWMeterViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +645,7 @@
 				F5F9C87F1DF8FE1C001EFE59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
