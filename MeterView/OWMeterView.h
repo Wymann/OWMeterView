@@ -21,6 +21,7 @@
 - (UIColor *)valueColorOnMeter:(OWMeterView *)meterView;
 - (UIFont *)titleFontOnMeter:(OWMeterView *)meterView;
 - (UIFont *)valueFontOnMeter:(OWMeterView *)meterView;
+- (UIButton *)hiddenButtonOnMeter:(OWMeterView *)meterView;
 
 @end
 
@@ -28,7 +29,8 @@
 
 @optional
 
-- (void)animationFinishedOnMeter:(OWMeterView *)meterView;
+- (void)didHiddenMeter:(OWMeterView *)meterView;
+- (void)didShowMeter:(OWMeterView *)meterView;
 
 @end
 

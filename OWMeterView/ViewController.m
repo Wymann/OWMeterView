@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _meterView = [[OWMeterView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 215.0)];
+    _meterView = [[OWMeterView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 150.0)];
     _meterView.dataSource = self;
     _meterView.delegate = self;
     [self.view addSubview:_meterView];
@@ -96,6 +96,16 @@
 -(UIColor *)valueColorOnMeter:(OWMeterView *)meterView
 {
     return [UIColor orangeColor];
+}
+
+-(void)didHiddenMeter:(OWMeterView *)meterView
+{
+    NSLog(@"hidden");
+}
+
+-(void)didShowMeter:(OWMeterView *)meterView
+{
+    NSLog(@"show");
 }
 
 - (void)start:(UIButton *)sender

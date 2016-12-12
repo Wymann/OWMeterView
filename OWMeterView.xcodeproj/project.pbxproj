@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4259A98C83F20068C7DA0930 /* libPods-OWMeterView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B74624A829A8961015A1A1 /* libPods-OWMeterView.a */; };
 		F5C2720D1DFA5968001597E3 /* OWSemicircle.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C2720C1DFA5968001597E3 /* OWSemicircle.m */; };
+		F5C294C91DFE3DA200C138F1 /* POPNumberAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C294C81DFE3DA200C138F1 /* POPNumberAnimation.m */; };
 		F5F9C84F1DF8FE1C001EFE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C84E1DF8FE1C001EFE59 /* main.m */; };
 		F5F9C8521DF8FE1C001EFE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8511DF8FE1C001EFE59 /* AppDelegate.m */; };
 		F5F9C8551DF8FE1C001EFE59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F9C8541DF8FE1C001EFE59 /* ViewController.m */; };
@@ -45,6 +46,8 @@
 		E049BD1FA3F3C6CD4583AC79 /* Pods-OWMeterView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWMeterView.release.xcconfig"; path = "Pods/Target Support Files/Pods-OWMeterView/Pods-OWMeterView.release.xcconfig"; sourceTree = "<group>"; };
 		F5C2720B1DFA5968001597E3 /* OWSemicircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSemicircle.h; sourceTree = "<group>"; };
 		F5C2720C1DFA5968001597E3 /* OWSemicircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSemicircle.m; sourceTree = "<group>"; };
+		F5C294C71DFE3DA200C138F1 /* POPNumberAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POPNumberAnimation.h; sourceTree = "<group>"; };
+		F5C294C81DFE3DA200C138F1 /* POPNumberAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POPNumberAnimation.m; sourceTree = "<group>"; };
 		F5F9C84A1DF8FE1C001EFE59 /* OWMeterView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OWMeterView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F9C84E1DF8FE1C001EFE59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5F9C8501DF8FE1C001EFE59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -188,6 +191,8 @@
 				F5F9C88B1DF9358B001EFE59 /* OWMeter.m */,
 				F5C2720B1DFA5968001597E3 /* OWSemicircle.h */,
 				F5C2720C1DFA5968001597E3 /* OWSemicircle.m */,
+				F5C294C71DFE3DA200C138F1 /* POPNumberAnimation.h */,
+				F5C294C81DFE3DA200C138F1 /* POPNumberAnimation.m */,
 			);
 			path = MeterView;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 				F5F9C88C1DF9358B001EFE59 /* OWMeter.m in Sources */,
 				F5F9C84F1DF8FE1C001EFE59 /* main.m in Sources */,
 				F5F9C8891DF934DC001EFE59 /* OWPointer.m in Sources */,
+				F5C294C91DFE3DA200C138F1 /* POPNumberAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,12 @@
 
 #import "OWMeterView.h"
 #import "OWMeter.h"
+#import "POPNumberAnimation.h"
 
 #define self_width self.frame.size.width
 #define self_height self.frame.size.height
 
-@interface OWMeterView()
+@interface OWMeterView()<POPNumberAnimationDelegate>
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) UIColor *frontColor;
@@ -26,13 +27,18 @@
 @property (nonatomic, strong) UIColor *valueColor;
 @property (nonatomic, strong) UIFont *titleFont;
 @property (nonatomic, strong) UIFont *ValueFont;
+@property (nonatomic, strong) UIButton *hiddenBtn;
+
+@property (nonatomic, strong) NSArray *animationViews;
+
+@property (nonatomic, strong) POPNumberAnimation *numberAnimation;
 
 @end
 
 @implementation OWMeterView
 {
     BOOL hidden;
-    CGRect oldRect;
+    CGFloat animationHeight;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -104,6 +110,15 @@
     }else{
         _ValueFont = [UIFont systemFontOfSize:30.0 * scale];
     }
+    
+    if ([self.dataSource respondsToSelector:@selector(hiddenButtonOnMeter:)]) {
+        _hiddenButton = [self.dataSource hiddenButtonOnMeter:self];
+    }else{
+        _hiddenButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _hiddenButton.backgroundColor = [UIColor lightGrayColor];
+        [_hiddenButton setTitle:@"隐藏" forState:UIControlStateNormal];
+        [_hiddenButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    }
 }
 
 #pragma mark - UI
@@ -118,6 +133,10 @@
     [self setValueLabel];
 
     [self setHiddenButton];
+    
+    [self initNumberAnimation];
+    
+    _animationViews = @[_titleLabel, _valueLabel, _hiddenButton];
 }
 
 - (void)setBackGroud
@@ -150,6 +169,8 @@
     CGRect frame = CGRectMake(X, Y, width, height);
     _meterView = [[OWMeter alloc] initWithFrame:frame color:_frontColor];
     [self addSubview:_meterView];
+    
+    animationHeight = height;
 }
 
 - (void)setTitleLabel
@@ -190,7 +211,7 @@
     CGFloat X = 0;
     CGFloat width = self_width;
     _valueLabel = [[UILabel alloc] initWithFrame:CGRectMake(X, Y, width, height)];
-    _valueLabel.text = @"test";
+    _valueLabel.text = @"0";
     _valueLabel.font = _ValueFont;
     _valueLabel.textColor = _valueColor;
     _valueLabel.textAlignment = NSTextAlignmentCenter;
@@ -199,39 +220,106 @@
 
 - (void)setHiddenButton
 {
-    CGFloat width_scale = 30.0 / 215.0;
-    CGFloat height_scale = 20.0 / 215.0;
+    CGFloat width_scale = 35.0 / 215.0;
+    CGFloat height_scale = 25.0 / 215.0;
     CGFloat height;
     CGFloat width;
-    CGFloat fontValue = 12.0;
+    CGFloat fontValue = 14.0;
     if (self_height >= 215.0) {
-        height = 20.0;
-        width = 30.0;
+        height = 25.0;
+        width = 35.0;
     } else {
         height = height_scale * self_height;
         width = width_scale * self_height;
-        fontValue = 12.0 * width_scale;
+        fontValue = 13.0 * self_height / 215.0;
     }
     CGFloat X = self_width/2 - width/2;
     CGFloat Y = self_height - height;
     
-    _hiddenButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _hiddenButton.backgroundColor = [UIColor lightGrayColor];
-    _hiddenButton.titleLabel.font = [UIFont systemFontOfSize:fontValue];
-    [_hiddenButton setTitle:@"隐藏" forState:UIControlStateNormal];
-    [_hiddenButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     _hiddenButton.frame = CGRectMake(X, Y, width, height);
+    _hiddenButton.titleLabel.font = [UIFont systemFontOfSize:fontValue];
     [_hiddenButton addTarget:self action:@selector(meterHiddenOrNotHiden) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_hiddenButton];
+}
+
+- (void)initNumberAnimation
+{
+    // Init numberAnimation.
+    self.numberAnimation          = [[POPNumberAnimation alloc] init];
+    self.numberAnimation.delegate = self;
+    [self configNumberAnimation];
+}
+
+- (void)configNumberAnimation {
+    self.numberAnimation.duration       = 0.6;
+    self.numberAnimation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.41 :0.07 :0.19 :0.53];
+    [self.numberAnimation saveValues];
 }
 
 - (void)meterHiddenOrNotHiden
 {
     if (hidden) {
-        oldRect = _meterView.bounds;
+        [UIView animateWithDuration:0.5 animations:^{
+            _meterView.transform = CGAffineTransformMakeScale(0.01, 0.01);
+            _meterView.alpha = 0.0;
+            
+            CGRect frame = self.frame;
+            frame.size.height = frame.size.height - animationHeight;
+            self.frame = frame;
+            
+            if (_backGroudView) {
+                CGRect frame = _backGroudView.frame;
+                frame.size.height = frame.size.height - animationHeight;
+                _backGroudView.frame = frame;
+            }
+            
+            for (UIView *view in _animationViews) {
+                CGRect frame = view.frame;
+                frame.origin.y = frame.origin.y - animationHeight;
+                view.frame = frame;
+            }
+        }completion:^(BOOL finished) {
+            hidden = NO;
+            if (self.delegate) {
+                [self.delegate didHiddenMeter:self];
+            }
+            
+            if (![self.dataSource respondsToSelector:@selector(hiddenButtonOnMeter:)]) {
+                [_hiddenButton setTitle:@"显示" forState:UIControlStateNormal];
+            }
+        }];
         
     } else {
-        
+        [UIView animateWithDuration:0.5 animations:^{
+            _meterView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+            _meterView.alpha = 1.0;
+            
+            CGRect frame = self.frame;
+            frame.size.height = frame.size.height + animationHeight;
+            self.frame = frame;
+            
+            if (_backGroudView) {
+                CGRect frame = _backGroudView.frame;
+                frame.size.height = frame.size.height + animationHeight;
+                _backGroudView.frame = frame;
+            }
+            
+            for (UIView *view in _animationViews) {
+                CGRect frame = view.frame;
+                frame.origin.y = frame.origin.y + animationHeight;
+                view.frame = frame;
+            }
+        }completion:^(BOOL finished) {
+            hidden = YES;
+            if (self.delegate) {
+                [self.delegate didShowMeter:self];
+            }
+            
+            if (![self.dataSource respondsToSelector:@selector(hiddenButtonOnMeter:)]) {
+                [_hiddenButton setTitle:@"隐藏" forState:UIControlStateNormal];
+            }
+        }];
     }
 }
 
@@ -240,6 +328,15 @@
 {
     _decimalValue = value / totalValue;
     [_meterView animationStartsWithDecimalValue:_decimalValue];
+    
+    self.numberAnimation.fromValue = self.numberAnimation.currentValue;
+    self.numberAnimation.toValue = value;
+    [self.numberAnimation saveValues];
+    [self.numberAnimation startAnimation];
+}
+
+- (void)POPNumberAnimation:(POPNumberAnimation *)numberAnimation currentValue:(CGFloat)currentValue {
+    _valueLabel.text = [NSString stringWithFormat:@"%.0lf",currentValue];
 }
 
 @end
